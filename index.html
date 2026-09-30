@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de JavaScript</title>
+    <style>
+        /* Estilos básicos apenas para organizar visualmente a página */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .botao {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .mensagem {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Estrutura HTML solicitada -->
+    <h1>Curiosidades sobre o Universo 🌌</h1>
+    
+    <p class="mensagem">Clique no botão abaixo para descobrir um fato espacial!</p>
+    
+    <button class="botao">Descobrir Fato</button>
+
+    <!-- 2. Código JavaScript responsável pelo funcionamento -->
+    <script>
+        // Seleciona os elementos da página usando as classes CSS
+        const botaoFato = document.querySelector(".botao");
+        const areaMensagem = document.querySelector(".mensagem");
+
+        // Criação correta da função que altera o texto visível
+        function mostrarCuriosidade() {
+            areaMensagem.textContent = "Sabia que um dia em Vênus é mais longo do que um ano inteiro em Vênus? 🪐";
+            areaMensagem.style.color = "#d9534f"; // Opcional: muda a cor do texto para destacar a alteração
+        }
+
+        // Configura o botão para executar a função através do clique
+        botaoFato.addEventListener("click", mostrarCuriosidade);
+    </script>
+
+</body>
+</html>
